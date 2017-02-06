@@ -41,5 +41,5 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   });
   $scope.slide = function (dir) {
     $('#sieradenOverview').carousel(dir);
-};
+  });
 });
