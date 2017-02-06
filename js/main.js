@@ -44,18 +44,6 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   });
 });
 
-$.getJSON( "img/overview.json", function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-    items.push( "<li id='" + key + "'>" + val + "</li>" );
-  });
- 
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "#test" );
-});
-
 var handle_the_slides = function(e) {
         e.preventDefault();
         var handler_of_slides = $(this);
