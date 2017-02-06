@@ -29,9 +29,8 @@
                 <div id="sieradenOverview" class="carousel slide" data-ride="carousel">
 
                     <!-- Wrapper for carousel items -->
-                    <div class="carousel-inner">
-                        <div class="item active" id="sieradenItemActive"></div>
-                        <div id="sieradenItems"></div>
+                    <div class="carousel-inner" id="sieradenItems">
+
                     </div>
                     <span class="left carousel-control" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -42,15 +41,19 @@
                 </div>
                 <script>
                     $.getJSON( "partials/overview.json", function( data ) {
-                      var items = [];
-                      var itemsDiv = [];
-                      $.each( data, function( key, val ) {
-                        items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
-                      });
+                          var items = [];
+                          $.each( data, function( key, val ) {
+                            items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
+                            console.log("push");
+                          });
 
-                      items.pop().appendTo( "#sieradenItemActive" );
-                      itemsDiv.push("<div class="item">"+items.pop()+"</div>");
-                      itemsDiv.join().appendTo( "#sieradenItems" );
+                          items.push( "<div class='item active'>"+items.shift()+"</div>");
+                          console.log("push2");
+                          for ( var i = 1, l = items.length; i < l; i++ ) {
+                            items[i] = "<div class='item active'>"+items[i]+"</div>";
+                            console.log(i);
+                          }
+                          $( "#sieradenItems" ).append( items.join() );
                     });
                 </script>
            </div>
