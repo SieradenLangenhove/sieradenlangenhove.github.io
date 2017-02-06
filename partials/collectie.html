@@ -18,7 +18,7 @@
             <h2>Collectie</h2>
 
             <p>Op deze pagina vindt u een overzicht van mijn creaties. Indien u meer informatie hierover wenst over één van de stukken, kan u mij gerust <a href="/#/contact">contacteren</a>.</p>
-            <p>test6</p>
+            <p>test7</p>
         </div>
 
     </div>
@@ -40,21 +40,21 @@
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </span>
                 </div>
+                <script>
+                    $.getJSON( "partials/overview.json", function( data ) {
+                      var items = [];
+                      var itemsDiv = [];
+                      $.each( data, function( key, val ) {
+                        items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
+                      });
+
+                      items.pop().appendTo( "#sieradenItemActive" );
+                      itemsDiv.push("<div class="item">"+items.pop()+"</div>");
+                      itemsDiv.join().appendTo( "#sieradenItems" );
+                    });
+                </script>
            </div>
     </div>
-    <script>
-        $.getJSON( "partials/overview.json", function( data ) {
-          var items = [];
-          var itemsDiv = [];
-          $.each( data, function( key, val ) {
-            items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
-          });
-          
-          items.pop().appendTo( "#sieradenItemActive" );
-          itemsDiv.push("<div class="item">"+items.pop()+"</div>");
-          itemsDiv.join().appendTo( "#sieradenItems" );
-        });
-    </script>
 <!--
     <div class="row">
         <div ng-non-bindable>
