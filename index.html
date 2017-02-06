@@ -63,6 +63,14 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
+    ($.ajax({
+              url: 'partials/overview.json',
+              dataType: "json",
+              success: function (key,val) {
+                    alert(key);
+              }
+        }));
+    
         (function() {
             alert("hiho");
             $.getJSON( "partials/overview.json", function( data ) {
