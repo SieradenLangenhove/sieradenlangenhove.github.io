@@ -18,7 +18,7 @@
             <h2>Collectie</h2>
 
             <p>Op deze pagina vindt u een overzicht van mijn creaties. Indien u meer informatie hierover wenst over één van de stukken, kan u mij gerust <a href="/#/contact">contacteren</a>.</p>
-            <p>test5</p>
+            <p>test6</p>
         </div>
 
     </div>
@@ -47,12 +47,12 @@
           var items = [];
           var itemsDiv = [];
           $.each( data, function( key, val ) {
-            items.push( "<img src='img/"+key+"' alt="+val+" width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
+            items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
           });
           
-          $( items.pop() ).appendTo( "#sieradenItemActive" );
+          items.pop().appendTo( "#sieradenItemActive" );
           itemsDiv.push("<div class="item">"+items.pop()+"</div>");
-          $( itemsDiv.join() ).appendTo( "#sieradenItems" );
+          itemsDiv.join().appendTo( "#sieradenItems" );
         });
     </script>
 <!--
