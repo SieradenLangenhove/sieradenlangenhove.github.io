@@ -63,7 +63,7 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
-    alert("abcde");
+    alert("a");
     
         $( document ).ready(function() {
             $.getJSON( "partials/overview.json", function( data ) {
@@ -73,8 +73,8 @@
                     items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
                 });
                 inserter.push( "<div class='item active'>"+items.shift()+"</div>");
-                for ( var i = 1, l = items.length; i < l; i++ ) {
-                    inserter.push("<div class='item'>"+items.pull()+"</div>");
+                for ( var i = 1; i < items.length; i++ ) {
+                    inserter.push("<div class='item'>"+items[i]+"</div>");
                  }
                  $( "#sieradenItems" ).append( inserter.join("") );
             });
