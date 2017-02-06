@@ -1,5 +1,5 @@
 /**
- * AngularJS Tutorial 1
+ * Sieraden Langenhove
  * @author Arne Govaerts <arne.govaerts@telenet.be>
  */
 
