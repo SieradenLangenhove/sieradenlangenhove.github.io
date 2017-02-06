@@ -53,7 +53,7 @@ $.getJSON( "img/overview.json", function( data ) {
   $( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
-  }).appendTo( "body" );
+  }).appendTo( "#test" );
 });
 
 var handle_the_slides = function(e) {
