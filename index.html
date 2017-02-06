@@ -63,21 +63,21 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
-    alert("abc");
+    alert("abcd");
     
         (function() {
             $.getJSON( "http://sieradenlangenhove.github.io/partials/overview.json", function( data ) {
                 var items = [];
-                alert("hihi");
+                alert("hihio");
                 $.each( data, function( key, val ) {
                     items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
-                    alert(key);
+                    alert(key+" v");
                 });
                 items.push( "<div class='item active'>"+items.shift()+"</div>");
-                alert("push2");
+                alert("push2b");
                 for ( var i = 1, l = items.length; i < l; i++ ) {
                     items[i] = "<div class='item active'>"+items[i]+"</div>";
-                    alert(i);
+                    alert(i+" b");
                  }
                  $( "#sieradenItems" ).append( items.join("") );
             });
