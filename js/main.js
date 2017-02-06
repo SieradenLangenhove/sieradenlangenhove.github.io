@@ -32,15 +32,11 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
 
   // Activates the Carousel
   $('.carousel').carousel({
-    interval: 5000
-  });
-  
-  $('.carousel').carousel({
                 interval: 5000,
                 pause: "hover",
                 wrap: true
             })
-            .on('click', '.carousel-control', handle_nav);
+            .on('click', '.carousel-control', handle_the_slides);
 
   // Activates Tooltips for Social Links
   $('.tooltip-social').tooltip({
@@ -48,8 +44,8 @@ app.controller('PageCtrl', function (/* $scope, $location, $http */) {
   });
 });
 
-var handle_nav = function(e) {
+var handle_the_slides = function(e) {
         e.preventDefault();
-        var nav = $(this);
-        nav.parents('.carousel').carousel(nav.data('slide'));
+        var handler_of_slides = $(this);
+        handler_of_slides.parents('.carousel').carousel(handler_of_slides.data('slide'));
   }
