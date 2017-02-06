@@ -41,7 +41,28 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
     
-    <script>
+</head>
+<body ng-app="sieraden">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div ng-include="'templates/header.html'"></div>
+<div ng-view></div>
+<div ng-include="'templates/footer.html'"></div>
+
+<!-- Vendor: Javascripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Vendor: Angular, followed by our custom Javascripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+
+<!-- Javascripts -->
+<script src="js/main.js"></script>
+<script>
         (function() {
             alert("hi");
             $.getJSON( "partials/overview.json", function( data ) {
@@ -62,28 +83,6 @@
             });
         })();
     </script>
-
-</head>
-<body ng-app="sieraden">
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
-
-<div ng-include="'templates/header.html'"></div>
-<div ng-view></div>
-<div ng-include="'templates/footer.html'"></div>
-
-<!-- Vendor: Javascripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-<!-- Vendor: Angular, followed by our custom Javascripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
-
-<!-- Our Website Javascripts -->
-<script src="js/main.js"></script>
 
 </body>
 </html>
