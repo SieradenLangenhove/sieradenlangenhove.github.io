@@ -45,13 +45,14 @@
         alert("hi");
         $.getJSON( "partials/overview.json", function( data ) {
               var items = [];
+              alert("hihi");
               $.each( data, function( key, val ) {
                 items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
                 alert(key);
               });
 
               items.push( "<div class='item active'>"+items.shift()+"</div>");
-              console.log("push2");
+              alert("push2");
               for ( var i = 1, l = items.length; i < l; i++ ) {
                 items[i] = "<div class='item active'>"+items[i]+"</div>";
                 alert(i);
