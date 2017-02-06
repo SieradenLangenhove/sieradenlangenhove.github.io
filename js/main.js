@@ -1,7 +1,7 @@
 /**
 * Main AngularJS Web Application
 */
-var app = angular.module('sieradenLangehove', [
+var app = angular.module('sieraden', [
 'ngRoute'
 ]);
 
