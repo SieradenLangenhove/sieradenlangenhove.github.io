@@ -63,10 +63,10 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
-    alert("a");
+    alert("ab");
     
         $( document ).ready(function() {
-            $.getJSON( "partials/overview.json", function( data ) {
+            $.getJSON( "http://sieradenlangenhove.github.io/partials/overview.json", function( data ) {
                 var items = [];
                 var inserter = [];
                 $.each( data, function( key, val ) {
