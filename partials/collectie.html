@@ -22,27 +22,12 @@
 
     </div>
 
-    <div class="row" id="test">
-    </div>
-    <script>
-        $.getJSON( "img/overview.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-            items.push( "<li id='" + key + "'>" + val + "</li>" );
-          });
 
-          $( "<ul/>", {
-            "class": "my-new-list",
-            html: items.join( "" )
-          }).appendTo( "#test" );
-        });
-    </script>
 
     <div class="row">
         <div ng-non-bindable>
             <div class="col-lg-12">
                 <div id="sieradenOverview" class="carousel slide" data-ride="carousel">
-                    <!-- Carousel indicators -->
 
                     <!-- Wrapper for carousel items -->
                     <div class="carousel-inner">
