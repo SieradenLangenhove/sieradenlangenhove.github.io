@@ -64,30 +64,22 @@
 <script src="js/main.js"></script>
 <script>
     alert("abc");
-    ($.ajax({
-              url: 'https://sieradenlangenhove.github.io/partials/overview.json',
-              dataType: "json",
-              success: function (key,val) {
-                    alert(key);
-              }
-        }));
     
         (function() {
-            $.getJSON( "https://sieradenlangenhove.github.io/partials/overview.json", function( data ) {
-                  var items = [];
-                  alert("hihi");
-                  $.each( data, function( key, val ) {
+            $.getJSON( "http://sieradenlangenhove.github.io/partials/overview.json", function( data ) {
+                var items = [];
+                alert("hihi");
+                $.each( data, function( key, val ) {
                     items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
                     alert(key);
-                  });
-
-                  items.push( "<div class='item active'>"+items.shift()+"</div>");
-                  alert("push2");
-                  for ( var i = 1, l = items.length; i < l; i++ ) {
+                });
+                items.push( "<div class='item active'>"+items.shift()+"</div>");
+                alert("push2");
+                for ( var i = 1, l = items.length; i < l; i++ ) {
                     items[i] = "<div class='item active'>"+items[i]+"</div>";
                     alert(i);
-                  }
-                  $( "#sieradenItems" ).append( items.join("") );
+                 }
+                 $( "#sieradenItems" ).append( items.join("") );
             });
         })();
     </script>
