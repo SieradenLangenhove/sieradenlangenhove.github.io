@@ -65,7 +65,7 @@
 <script>
     alert("abcd");
     
-        (function() {
+        $( document ).ready(function() {
             $.getJSON( "http://sieradenlangenhove.github.io/partials/overview.json", function( data ) {
                 var items = [];
                 alert("hihio");
@@ -81,7 +81,7 @@
                  }
                  $( "#sieradenItems" ).append( items.join("") );
             });
-        })();
+        });
     </script>
 
 </body>
