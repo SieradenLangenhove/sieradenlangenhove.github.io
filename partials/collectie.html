@@ -18,21 +18,46 @@
             <h2>Collectie</h2>
 
             <p>Op deze pagina vindt u een overzicht van mijn creaties. Indien u meer informatie hierover wenst over één van de stukken, kan u mij gerust <a href="/#/contact">contacteren</a>.</p>
+            <p>test</p>
         </div>
 
     </div>
 
-
-
     <div class="row">
-        <p>test</p>
         <div ng-non-bindable>
             <div class="col-lg-12">
                 <div id="sieradenOverview" class="carousel slide" data-ride="carousel">
 
                     <!-- Wrapper for carousel items -->
                     <div class="carousel-inner">
-                        <div class="item">
+                        <div class="item active" id="sieradenItemActive"></div>
+                        <div id="sieradenItems"></div>
+                    </div>
+                </div>
+           </div>
+    </div>
+    <script>
+        $.getJSON( "partials/overview.json", function( data ) {
+          var items = [];
+          var itemsDiv = [];
+          $.each( data, function( key, val ) {
+            items.push( "<img src='img/"+key+"' alt="+val+" width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
+          });
+          
+          $( items.pop() ).appendTo( "#sieradenItemActive" );
+          itemsDiv.push("<div class="item">"+items.pop()+"</div>");
+          $( itemsDiv.join() ).appendTo( "#sieradenItems" );
+        });
+    </script>
+
+    <div class="row">
+        <div ng-non-bindable>
+            <div class="col-lg-12">
+                <div id="sieradenOverview" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item active">
                             <img src="img/88tnht2g1k4-brooke-cagle.jpg" alt="Holder" width="460">
                             <div class="carousel-caption">
                               <p>Brooke Cagle</p>
