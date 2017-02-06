@@ -39,23 +39,6 @@
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </span>
                 </div>
-                <script>
-                    $.getJSON( "partials/overview.json", function( data ) {
-                          var items = [];
-                          $.each( data, function( key, val ) {
-                            items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
-                            alert(key);
-                          });
-
-                          items.push( "<div class='item active'>"+items.shift()+"</div>");
-                          console.log("push2");
-                          for ( var i = 1, l = items.length; i < l; i++ ) {
-                            items[i] = "<div class='item active'>"+items[i]+"</div>";
-                            alert(i);
-                          }
-                          $( "#sieradenItems" ).append( items.join("") );
-                    });
-                </script>
            </div>
     </div>
 <!--
