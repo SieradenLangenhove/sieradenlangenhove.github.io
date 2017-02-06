@@ -63,23 +63,20 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
-    alert("abc");
+    alert("abcde");
     
         $( document ).ready(function() {
             $.getJSON( "partials/overview.json", function( data ) {
                 var items = [];
-                alert("hihio");
+                var inserter = [];
                 $.each( data, function( key, val ) {
                     items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
-                    alert(key+" v");
                 });
-                items.push( "<div class='item active'>"+items.shift()+"</div>");
-                alert("push2b");
+                inserter.push( "<div class='item active'>"+items.shift()+"</div>");
                 for ( var i = 1, l = items.length; i < l; i++ ) {
-                    items[i] = "<div class='item active'>"+items[i]+"</div>";
-                    alert(i+" b");
+                    inserter.push("<div class='item'>"+items.pull()+"</div>");
                  }
-                 $( "#sieradenItems" ).append( items.join("") );
+                 $( "#sieradenItems" ).append( inserter.join("") );
             });
         });
     </script>
