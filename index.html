@@ -63,9 +63,9 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
-    alert("hey");
+    alert("abc");
     ($.ajax({
-              url: 'partials/overview.json',
+              url: 'https://sieradenlangenhove.github.io/partials/overview.json',
               dataType: "json",
               success: function (key,val) {
                     alert(key);
@@ -73,7 +73,7 @@
         }));
     
         (function() {
-            $.getJSON( "partials/overview.json", function( data ) {
+            $.getJSON( "https://sieradenlangenhove.github.io/partials/overview.json", function( data ) {
                   var items = [];
                   alert("hihi");
                   $.each( data, function( key, val ) {
