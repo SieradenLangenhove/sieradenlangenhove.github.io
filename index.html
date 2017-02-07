@@ -64,7 +64,7 @@
 <script src="js/main.js"></script>
 <script>
     var inserter = [];
-    $.getJSON( "partials/overview.json", function( data ) {
+    var getter = $.getJSON( "partials/overview.json", function( data ) {
         var items = [];
         $.each( data, function( key, val ) {
             items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
@@ -74,10 +74,12 @@
             inserter.push("<div class='item'>"+items[i]+"</div>");
          }
      });
-     $( document ).ready(function() {
+    $(document).ready(function(){
+     getter.done(function() {
          $( "#sieradenItems" ).append( inserter.join("") );4
          alert(inserter.join());
         });
+    });
 </script>
 </body>
 </html>
