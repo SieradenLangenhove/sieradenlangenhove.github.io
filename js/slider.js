@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    alert("whoop");
     $.getJSON( "partials/overview.json", function( data ) {
         var items = [];
         $.each( data, function( key, val ) {
