@@ -1,6 +1,3 @@
-
-var getter = 
-
 $(document).ready(function(){
     $.getJSON( "partials/overview.json", function( data ) {
         var items = [];
