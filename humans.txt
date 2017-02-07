@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Arne Govaerts - Developer - @argovaerts
 
 # THANKS
 
-    <name>
+    Gerda Van Langenhove
 
 # TECHNOLOGY COLOPHON
 
