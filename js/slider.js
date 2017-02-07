@@ -1,6 +1,6 @@
 var items = [];
 var getter = $.getJSON( "partials/overview.json", function( data ) {
-      alert("hii");
+      alert("hio");
       $.each( data, function( key, val ) {
         items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
       });
