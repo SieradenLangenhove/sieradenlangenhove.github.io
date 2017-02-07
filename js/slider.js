@@ -1,4 +1,5 @@
 var items = [];
+alert("ho");
 if(items.length != 0){
     alert("hi");
     var getter = $.getJSON( "partials/overview.json", function( data ) {
