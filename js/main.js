@@ -21,7 +21,11 @@ app.config(['$routeProvider', function ($routeProvider) {
     .when("/collectie", {templateUrl: "partials/collectie.html", controller: "PageCtrl"})
     .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
     //404
-    .otherwise({redirectTo:'https://google.be'});
+    .otherwise({
+        redirectTo: function() {
+            window.location = "/404.html";
+        }
+    });
 }]);
 
 /**
