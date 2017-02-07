@@ -63,24 +63,23 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
+$(document).ready(function(){
+    $.getJSON( "partials/overview.json", function( data ) {
     var items = [];
-    var getter = $.getJSON( "partials/overview.json", function( data ) {
-        var temp = [];
-        $.each( data, function( key, val ) {
-            temp.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
+              alert("hihi");
+              $.each( data, function( key, val ) {
+                items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
+                alert(key);
+              });
+              items.push( "<div class='item active'>"+items.shift()+"</div>");
+              alert("push2");
+              for ( var i = 1, l = items.length; i < l; i++ ) {
+                items[i] = "<div class='item active'>"+items[i]+"</div>";
+                alert(i);
+              }
+              $( "#sieradenItems" ).append( items.join("") );
         });
-        items.push( "<div class='item active'>"+temp[0]+"</div>");
-        for ( var i = 1; i < items.length; i++ ) {
-            items.push("<div class='item'>"+temp[i]+"</div>");
-         }
-        temp.length = 0;
-     });
-    $(document).ready(function(){
-     getter.done(function() {
-         $( "#sieradenItems" ).append( inserter.join("") );4
-         alert(inserter.join());
-        });
-    });
+});
 </script>
 </body>
 </html>
