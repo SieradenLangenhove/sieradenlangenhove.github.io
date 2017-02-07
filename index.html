@@ -63,16 +63,17 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
-    var inserter = [];
+    var items = [];
     var getter = $.getJSON( "partials/overview.json", function( data ) {
-        var items = [];
+        var temp = [];
         $.each( data, function( key, val ) {
-            items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
+            temp.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
         });
-        inserter.push( "<div class='item active'>"+items.shift()+"</div>");
+        items.push( "<div class='item active'>"+temp[0]+"</div>");
         for ( var i = 1; i < items.length; i++ ) {
-            inserter.push("<div class='item'>"+items[i]+"</div>");
+            items.push("<div class='item'>"+temp[i]+"</div>");
          }
+        temp.length = 0;
      });
     $(document).ready(function(){
      getter.done(function() {
