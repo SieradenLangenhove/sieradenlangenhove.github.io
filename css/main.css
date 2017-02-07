@@ -65,11 +65,12 @@ textarea {
     margin-top:5%;
 }
 
-.navbar-haeder, .navbar-collapse{
+.navbar, .navbar-header, .navbar-collapse{
     color:#d1d1d3;
     background:#f5f5f5;
     border:0px;
     font-family: 'Indie Flower', cursive;
+    font-size:larger;
 }
 .ng-scope{
     font-family: 'Lato', sans-serif;
