@@ -71,7 +71,7 @@ textarea {
     border:0px;
     font-family: 'Indie Flower', cursive;
 }
-html,container{
+.ng-scope{
     font-family: 'Lato', sans-serif;
 }
 
