@@ -61,7 +61,9 @@ textarea {
       margin: auto;
   }
 
-
+.ng-scope{
+    margin:0.5em;
+}
 
 
 
