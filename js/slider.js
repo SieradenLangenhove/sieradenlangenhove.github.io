@@ -13,5 +13,6 @@ $(document).ready(function(){
             items[i] = "<div class='item'>"+items[i]+"</div>";
         }
         $( "#sieradenitems" ).append( items.join("") );
+        alert(items.join());
     });
 });
