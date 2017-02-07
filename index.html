@@ -64,7 +64,7 @@
 <script src="js/main.js"></script>
 <script>
 var items = [];
-$.getJSON( "partials/overview.json", function( data ) {
+var getter = $.getJSON( "partials/overview.json", function( data ) {
       alert("hi");
       $.each( data, function( key, val ) {
         items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
@@ -75,8 +75,10 @@ $.getJSON( "partials/overview.json", function( data ) {
       }
 });
 $(document).ready(function(){
+    getter.done(function(){
       $( "#sieradenItems" ).append( items.join("") );
       alert(items.join());
+    });
 });
 </script>
 </body>
