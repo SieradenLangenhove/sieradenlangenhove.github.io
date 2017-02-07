@@ -75,7 +75,9 @@ textarea {
 .ng-scope{
     font-family: 'Lato', sans-serif;
 }
-
+.navbar-brand{
+    font-size:larger;
+}
 
 
 
