@@ -1,6 +1,6 @@
 var items = [];
 alert("ho");
-if(items.length != 0){
+
     alert("hi");
     var getter = $.getJSON( "partials/overview.json", function( data ) {
           $.each( data, function( key, val ) {
@@ -11,7 +11,7 @@ if(items.length != 0){
             items[i] = "<div class='item'>"+items[i]+"</div>";
           }
     });
-}
+
 $(document).ready(function(){
     getter.done(function(){
       $( "#sieradenItems" ).append( items.join("") );
