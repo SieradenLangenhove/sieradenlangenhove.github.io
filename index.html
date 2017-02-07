@@ -63,21 +63,21 @@
 <!-- Javascripts -->
 <script src="js/main.js"></script>
 <script>
-     $( document ).ready(function() {
-            $.getJSON( "partials/overview.json", function( data ) {
-                var items = [];
-                var inserter = [];
-                $.each( data, function( key, val ) {
-                    items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
-                });
-                inserter.push( "<div class='item active'>"+items.shift()+"</div>");
-                for ( var i = 1; i < items.length; i++ ) {
-                    inserter.push("<div class='item'>"+items[i]+"</div>");
-                 }
-                 $( "#sieradenItems" ).append( inserter.join("") );
-            });
+    var inserter = [];
+    $.getJSON( "partials/overview.json", function( data ) {
+        var items = [];
+        $.each( data, function( key, val ) {
+            items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
         });
-    </script>
-
+        inserter.push( "<div class='item active'>"+items.shift()+"</div>");
+        for ( var i = 1; i < items.length; i++ ) {
+            inserter.push("<div class='item'>"+items[i]+"</div>");
+         }
+     });
+     $( document ).ready(function() {
+         $( "#sieradenItems" ).append( inserter.join("") );4
+         alert(inserter.join());
+        });
+</script>
 </body>
 </html>
