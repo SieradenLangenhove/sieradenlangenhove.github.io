@@ -62,7 +62,7 @@ textarea {
   }
 
 #content-holder{
-    margin-top:5%;
+    padding-top:5%;
 }
 
 .navbar, .navbar-header, .navbar-collapse{
@@ -78,14 +78,6 @@ textarea {
 .navbar-brand{
     font-size:larger;
 }
-
-
-
-
-
-
-
-
 
 
 /* ==========================================================================
