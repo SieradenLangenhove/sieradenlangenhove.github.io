@@ -1,5 +1,5 @@
 var items = [];
-alert("ho");
+alert("hor");
 
     alert("hi");
     var getter = $.getJSON( "partials/overview.json", function( data ) {
