@@ -1,8 +1,8 @@
 var items = [];
 var getter = $.getJSON( "partials/overview.json", function( data ) {
       $.each( data, function( key, val ) {
-        items.push( "<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
-        console.log(key);
+        items.push("<img src='img/"+key+"' alt='"+val+"' width='460'><div class='carousel-caption'><p>"+val+"</p></div>");
+        alert(key);
       });
       items.push( "<div class='item active'>"+items.pop()+"</div>");
       for ( var i = 0; i < items.length-1; i++ ) {
