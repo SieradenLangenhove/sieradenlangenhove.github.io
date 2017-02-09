@@ -102,10 +102,6 @@ img{
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-width-vw img{
-   
-}
-
 
 /* ==========================================================================
    Media Queries
