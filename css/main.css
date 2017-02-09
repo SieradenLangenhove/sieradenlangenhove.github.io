@@ -59,6 +59,11 @@ textarea {
   .carousel-inner > .item > a > img {
     width: 70%;
     margin: 0 auto;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 
 #content-holder{
@@ -94,7 +99,8 @@ table{
 .img-responsive{
     margin-left:auto;
     margin-right:auto;
-    
+}
+.turnabit{
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
