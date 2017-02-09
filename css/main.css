@@ -83,7 +83,7 @@ table{
     width:75%;
 }
 .blockcentering{
-    display:block;
+    display:inline-block;
 }
 
 
