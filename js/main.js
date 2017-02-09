@@ -20,6 +20,7 @@ app.config(['$routeProvider', function ($routeProvider) {
     // Pages
     .when("/collectie", {templateUrl: "partials/collectie.html", controller: "PageCtrl"})
     .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
+    .when("/workshops", {templateUrl: "partials/workshops.html", controller: "PageCtrl"})
     //404
     .otherwise({
         redirectTo: function() {
