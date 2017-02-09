@@ -83,9 +83,6 @@ table{
     width:75%;
 }
 .blockcentering{
-    text-align: center;
-}
-.blockcentering ul{
     display:block;
 }
 
