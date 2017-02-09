@@ -82,6 +82,11 @@ textarea {
 table{
     width:75%;
 }
+.blockcentering{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
 
 
 /* ==========================================================================
