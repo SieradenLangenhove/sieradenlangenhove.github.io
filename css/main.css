@@ -101,7 +101,10 @@ img{
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
-    display:block;
+}
+width-vw{
+    width:100%;
+    height:100%;
 }
 
 
