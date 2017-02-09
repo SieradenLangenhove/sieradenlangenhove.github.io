@@ -78,7 +78,7 @@ textarea {
 }
 .navbar-brand{
     font-size:1em;
-    margin-top:0;
+    padding-top:0;
 }
 table{
     width:75%;
