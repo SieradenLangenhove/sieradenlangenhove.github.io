@@ -102,6 +102,10 @@ img{
     -o-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+.workshop-images{
+    width:75%;
+    margin:5%;
+}
 
 /* ==========================================================================
    Media Queries
