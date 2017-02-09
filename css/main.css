@@ -2,7 +2,7 @@
 
 html {
     color: #514e5e;
-    font-size: 1.5em;
+    font-size: 1em;
     line-height: 1.4;
 }
 
@@ -74,9 +74,11 @@ textarea {
 }
 .ng-scope{
     font-family: 'Indie Flower', cursive;
+    font-size:1.5em;
 }
 .navbar-brand{
     font-size:larger;
+    text-align:center;
 }
 table{
     width:75%;
