@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.getJSON( "partials/overview.json", function( data ) {
+    $.getJSON( "img/collectie.json", function( data ) {
         var items = [];
         $.each( data, function( key, val ) {
             items.push("<img src='img/"+key+"' alt='"+val+"' width='100%'><div class='carousel-caption'><p>"+val+"</p></div>");
