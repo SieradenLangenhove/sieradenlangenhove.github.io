@@ -89,9 +89,11 @@ table{
     width:16em;
 }
 .navbar > .container .navbar-brand{
-    margin-left:10vw;
+    margin-left:20vw;
 }
-
+.img-responsive{
+    text-align:center;
+}
 
 /* ==========================================================================
    Media Queries
