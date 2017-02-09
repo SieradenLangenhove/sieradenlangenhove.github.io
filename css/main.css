@@ -82,11 +82,8 @@ textarea {
 table{
     width:75%;
 }
-.blockcentering{
+.left-center{
     text-align:left;
-    margin-left: auto;
-    margin-right: auto;
-    width: 16em;
 }
 .navbar > .container .navbar-brand{
     margin-left:10em;
