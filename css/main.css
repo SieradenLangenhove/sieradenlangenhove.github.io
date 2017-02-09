@@ -89,7 +89,8 @@ table{
     width: 16em;
 }
 .navbar > .container .navbar-brand{
-    margin-left:10%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 
